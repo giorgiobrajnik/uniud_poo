@@ -1,0 +1,37 @@
+{
+  "folders": [
+    {
+      "path": "esempio-pizzeria",
+      "name": "Esempio Pizzeria"
+    }
+  ],
+  "settings": {
+    "java.project.sourcePaths": [
+      "esempio-pizzeria/src/main/java",
+      "esempio-pizzeria/src/test/java"
+    ],
+    "java.test.config": {
+      "name": "pizzeria-tests",
+      "workingDirectory": "${workspaceFolder}/esempio-pizzeria",
+      "args": "",
+      "vmargs": "",
+      "preLaunchTask": ""
+    },
+    "[java]": {
+      "editor.defaultFormatter": "redhat.java",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      }
+    },
+    "java.configuration.updateBuildConfiguration": "interactive"
+  },
+  "extensions": {
+    "recommendations": [
+      "redhat.java",
+      "vscjava.vscode-maven",
+      "vscjava.vscode-java-test",
+      "vscjava.vscode-java-debug"
+    ]
+  }
+}

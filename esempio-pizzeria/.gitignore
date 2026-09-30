@@ -1,0 +1,7 @@
+# Ignora tutto...
+/*
+
+# ...tranne sorgenti e configurazione
+!/.gitignore
+!/pom.xml
+!/src/
