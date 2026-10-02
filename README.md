@@ -2,21 +2,6 @@
 
 This is a multi-project Java workspace organized with Maven for the Programming course 2026.
 
-## Project Structure
-
-```
-poo-2026/
-├── esempio-pizzeria/          # First project: Pizza manager application
-│   ├── src/
-│   │   ├── main/java/        # Production source code
-│   │   └── test/java/        # Test source code
-│   ├── pom.xml               # Maven configuration
-│   └── target/               # Build output (auto-generated)
-├── pom.xml                   # Root POM (optional, for multi-module)
-├── .gitignore                # Git ignore rules
-├── README.md                 # This file
-└── poo-2026.code-workspace   # VS Code workspace file
-```
 
 ## Getting Started
 

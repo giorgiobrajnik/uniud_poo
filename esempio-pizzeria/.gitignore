@@ -1,7 +1,17 @@
-# Ignora tutto...
-/*
+# Maven build artifacts
+target/
+*.jar
+*.war
 
-# ...tranne sorgenti e configurazione
-!/.gitignore
-!/pom.xml
-!/src/
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
