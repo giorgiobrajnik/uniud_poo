@@ -15,6 +15,7 @@
 
     <modules>
         <module>convenzioni_base</module>
+        <module>tipi_base</module>
     </modules>
 
     <properties>

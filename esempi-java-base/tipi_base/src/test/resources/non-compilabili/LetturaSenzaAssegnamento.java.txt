@@ -1,0 +1,8 @@
+package it.universita.esse3.client;
+
+public class LetturaSenzaAssegnamento {
+    public void stampa() {
+        int voto;
+        System.out.println(voto);
+    }
+}

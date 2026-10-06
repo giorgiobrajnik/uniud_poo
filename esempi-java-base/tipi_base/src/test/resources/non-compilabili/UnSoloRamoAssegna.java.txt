@@ -1,0 +1,13 @@
+package it.universita.esse3.client;
+
+public class UnSoloRamoAssegna {
+    public void stampa(boolean esameSuperato) {
+        int voto;
+
+        if (esameSuperato) {
+            voto = 30;
+        }
+
+        System.out.println(voto);
+    }
+}

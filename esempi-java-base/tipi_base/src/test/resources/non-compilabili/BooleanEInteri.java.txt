@@ -1,0 +1,8 @@
+package it.universita.esse3.client;
+
+public class BooleanEInteri {
+    public void conversioniNonAmmesse() {
+        boolean b = 1;
+        int x = true;
+    }
+}

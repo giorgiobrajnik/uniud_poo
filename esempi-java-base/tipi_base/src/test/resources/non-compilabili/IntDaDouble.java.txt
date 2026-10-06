@@ -1,0 +1,9 @@
+package it.universita.esse3.client;
+
+public class IntDaDouble {
+    public int troncaSenzaCast() {
+        double media = 27.9;
+        int parteIntera = media;
+        return parteIntera;
+    }
+}
