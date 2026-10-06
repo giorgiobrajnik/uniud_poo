@@ -1,0 +1,9 @@
+package it.universita.esse3.omonimie.report;
+
+import it.universita.esse3.omonimie.esami.Esame;
+import it.universita.esse3.omonimie.appelli.Esame;
+
+public class DueImportStessoNome {
+    public void generaReport(Esame esame) {
+    }
+}

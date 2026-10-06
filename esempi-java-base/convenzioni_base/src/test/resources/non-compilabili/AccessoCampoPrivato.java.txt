@@ -1,0 +1,9 @@
+package it.universita.esse3.client;
+
+import it.universita.esse3.visibilita.Studente;
+
+public class AccessoCampoPrivato {
+    public void azzeraCrediti(Studente studente) {
+        studente.creditiAcquisiti = -500;
+    }
+}

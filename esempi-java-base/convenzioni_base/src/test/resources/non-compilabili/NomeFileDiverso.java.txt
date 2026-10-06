@@ -1,0 +1,5 @@
+package it.universita.esse3.client;
+
+// Va compilato come file NomeFile.java: una classe public deve stare in un file con il suo nome
+public class NomeDiverso {
+}

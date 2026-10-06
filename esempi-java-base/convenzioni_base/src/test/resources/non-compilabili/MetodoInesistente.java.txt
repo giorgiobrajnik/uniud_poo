@@ -1,0 +1,9 @@
+package it.universita.esse3.omonimie.report;
+
+import it.universita.esse3.omonimie.esami.Esame;
+
+public class MetodoInesistente {
+    public void generaReport(Esame esame) {
+        System.out.println(esame.getAula());
+    }
+}

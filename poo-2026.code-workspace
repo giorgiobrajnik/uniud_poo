@@ -3,6 +3,9 @@
     {
       "path": "esempio-pizzeria",
       "name": "Esempio Pizzeria"
+    },
+    {
+      "path": "esempi-java-base"
     }
   ],
   "settings": {
