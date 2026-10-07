@@ -17,6 +17,7 @@
         <module>01_convenzioni_base</module>
         <module>02_tipi_base</module>
         <module>03_oggetti_metodi</module>
+        <module>04_uguaglianza_copia</module>
     </modules>
 
     <properties>
