@@ -5,9 +5,12 @@ package it.universita.esse3.overflow;
  * Controesempio: {@code Integer.MAX_VALUE + 1} non genera eccezioni e vale
  * {@code Integer.MIN_VALUE}, perche' il risultato "gira" all'estremo opposto
  * dell'intervallo (complemento a due). Esempi corretti: {@code Math.addExact} e
- * {@code Math.multiplyExact} lanciano {@link ArithmeticException} quando il risultato non
- * e' rappresentabile, e un tipo piu' ampio ({@code long}) contiene il risultato. Conviene
- * scegliere il tipo in base all'intervallo necessario, non perche' "e' un numero".
+ * {@code Math.multiplyExact} lanciano {@link ArithmeticException} quando il
+ * risultato non
+ * e' rappresentabile, e un tipo piu' ampio ({@code long}) contiene il
+ * risultato. Conviene
+ * scegliere il tipo in base all'intervallo necessario, non perche' "e' un
+ * numero".
  */
 public class EsempioOverflow {
     public static void main(String[] args) {

@@ -4,13 +4,19 @@ import it.universita.esse3.omonimie.report.ReportEsami;
 import java.time.LocalDate;
 
 /**
- * Package e import: lo stesso nome semplice in package diversi indica tipi diversi.
+ * Package e import: lo stesso nome semplice in package diversi indica tipi
+ * diversi.
  * {@code Esame} esiste in {@code omonimie.esami} (attivita' didattica) e in
- * {@code omonimie.appelli} (prova da sostenere); {@code Stato} esiste in tre package con
- * significati diversi. {@code ReportEsami} importa un solo {@code Esame} e qualifica per
- * esteso l'altro (nome completamente qualificato). Controesempio: importare entrambi i
- * tipi con lo stesso nome semplice non compila (vedi i sorgenti {@code .java.txt} nei
- * test). I package evitano sia i conflitti di nome sia la confusione di significato.
+ * {@code omonimie.appelli} (prova da sostenere); {@code Stato} esiste in tre
+ * package con
+ * significati diversi. {@code ReportEsami} importa un solo {@code Esame} e
+ * qualifica per
+ * esteso l'altro (nome completamente qualificato). Controesempio: importare
+ * entrambi i
+ * tipi con lo stesso nome semplice non compila (vedi i sorgenti
+ * {@code .java.txt} nei
+ * test). I package evitano sia i conflitti di nome sia la confusione di
+ * significato.
  */
 public class EsempioOmonimie {
     public static void main(String[] args) {

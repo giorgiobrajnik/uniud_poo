@@ -2,11 +2,15 @@ package it.universita.esse3.primitivi;
 
 /**
  * Tipi primitivi: intervalli, letterali e {@code char}.
- * Stampa gli intervalli di {@code byte}, {@code short}, {@code int} e {@code long}, il
- * valore dei letterali con suffisso {@code L} e con separatore {@code _}, e i tipi dei
+ * Stampa gli intervalli di {@code byte}, {@code short}, {@code int} e
+ * {@code long}, il
+ * valore dei letterali con suffisso {@code L} e con separatore {@code _}, e i
+ * tipi dei
  * letterali {@code 1.5F}, {@code 1.5}, {@code 'A'} e {@code "A"}. Mostra che un
- * {@code char} e' una sola unita' UTF-16: un simbolo Unicode fuori dal piano base occupa
- * due {@code char} anche se e' un solo carattere. Controesempio (non compila): un
+ * {@code char} e' una sola unita' UTF-16: un simbolo Unicode fuori dal piano
+ * base occupa
+ * due {@code char} anche se e' un solo carattere. Controesempio (non compila):
+ * un
  * {@code boolean} non e' un intero, quindi {@code boolean b = 1;} e' un errore.
  */
 public class EsempioPrimitivi {

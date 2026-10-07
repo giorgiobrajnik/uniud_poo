@@ -2,11 +2,16 @@ package it.universita.esse3.assegnamento;
 
 /**
  * Variabili locali e definite assignment.
- * Una variabile locale non ha un valore di default: il compilatore pretende che sia
- * sicuramente assegnata prima di ogni lettura. {@link VotoDaEsito} la assegna in entrambi
- * i rami di un {@code if}/{@code else} e compila. Controesempi (non compilano, vedi i
- * test): leggere una variabile mai assegnata, oppure assegnarla in un solo ramo e leggerla
- * dopo. I campi, invece, ricevono un valore di default ({@link ValoriDiDefault}):
+ * Una variabile locale non ha un valore di default: il compilatore pretende che
+ * sia
+ * sicuramente assegnata prima di ogni lettura. {@link VotoDaEsito} la assegna
+ * in entrambi
+ * i rami di un {@code if}/{@code else} e compila. Controesempi (non compilano,
+ * vedi i
+ * test): leggere una variabile mai assegnata, oppure assegnarla in un solo ramo
+ * e leggerla
+ * dopo. I campi, invece, ricevono un valore di default
+ * ({@link ValoriDiDefault}):
  * {@code 0}, {@code false} o {@code null}.
  */
 public class EsempioAssegnamento {

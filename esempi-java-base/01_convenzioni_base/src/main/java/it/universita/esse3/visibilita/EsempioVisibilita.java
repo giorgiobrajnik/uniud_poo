@@ -4,12 +4,18 @@ import java.time.LocalDate;
 
 /**
  * Visibilita' e modificatori di accesso: campi {@code private}, API pubblica.
- * {@link Appello} mantiene lo stato valido: i posti non scendono sotto zero e uno
- * studente con debiti non puo' prenotarsi, perche' il client usa solo metodi pubblici che
- * controllano le precondizioni. Controesempio: {@link AppelloScadente} ha campi pubblici
- * e nessun controllo, quindi un client puo' impostare {@code postiDisponibili = -1000}
- * senza che il compilatore protesti. {@link CalcoloPostiDisponibili} e' package-private,
- * visibile solo nel proprio package; l'accesso da fuori non compila (vedi i test).
+ * {@link Appello} mantiene lo stato valido: i posti non scendono sotto zero e
+ * uno
+ * studente con debiti non puo' prenotarsi, perche' il client usa solo metodi
+ * pubblici che
+ * controllano le precondizioni. Controesempio: {@link AppelloScadente} ha campi
+ * pubblici
+ * e nessun controllo, quindi un client puo' impostare
+ * {@code postiDisponibili = -1000}
+ * senza che il compilatore protesti. {@link CalcoloPostiDisponibili} e'
+ * package-private,
+ * visibile solo nel proprio package; l'accesso da fuori non compila (vedi i
+ * test).
  */
 public class EsempioVisibilita {
     public static void main(String[] args) {

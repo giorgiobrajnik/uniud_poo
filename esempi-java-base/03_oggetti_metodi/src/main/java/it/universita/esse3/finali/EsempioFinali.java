@@ -2,10 +2,14 @@ package it.universita.esse3.finali;
 
 /**
  * La parola chiave {@code final}: che cosa garantisce davvero.
- * Costanti {@code static final}, campi {@code final} assegnati nel costruttore o alla
- * dichiarazione, variabili locali e parametri {@code final}, e una variabile assegnata
- * una sola volta per ogni percorso di esecuzione. Controesempi: {@code final} su un
- * riferimento blocca la variabile ma non l'oggetto, quindi una lista, un array o uno
+ * Costanti {@code static final}, campi {@code final} assegnati nel costruttore
+ * o alla
+ * dichiarazione, variabili locali e parametri {@code final}, e una variabile
+ * assegnata
+ * una sola volta per ogni percorso di esecuzione. Controesempi: {@code final}
+ * su un
+ * riferimento blocca la variabile ma non l'oggetto, quindi una lista, un array
+ * o uno
  * {@code StringBuilder} {@code final} possono comunque cambiare contenuto. Le
  * riassegnazioni di variabili {@code final} non compilano (vedi i test).
  */

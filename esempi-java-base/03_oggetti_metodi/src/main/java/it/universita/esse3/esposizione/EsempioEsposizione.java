@@ -5,9 +5,12 @@ import java.util.List;
 
 /**
  * Esposizione della rappresentazione e copia difensiva.
- * Un campo {@code private final} non basta a proteggere lo stato se punta a un oggetto
- * mutabile. Controesempi: {@link PianoStudiCondiviso} conserva la lista del chiamante, che
- * puo' cambiarla dopo la costruzione; {@link LibrettoEsposto} restituisce la lista interna
+ * Un campo {@code private final} non basta a proteggere lo stato se punta a un
+ * oggetto
+ * mutabile. Controesempi: {@link PianoStudiCondiviso} conserva la lista del
+ * chiamante, che
+ * puo' cambiarla dopo la costruzione; {@link LibrettoEsposto} restituisce la
+ * lista interna
  * dal getter, e un client ci aggiunge un voto non previsto. Versioni protette:
  * {@link PianoStudi} copia la lista nel costruttore con {@code List.copyOf} e
  * {@link Libretto} restituisce una copia non modificabile.

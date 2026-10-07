@@ -4,11 +4,16 @@ import java.util.Arrays;
 
 /**
  * Passaggio dei parametri: Java passa sempre per valore.
- * Un parametro primitivo riceve una copia del valore, quindi la variabile del chiamante
- * non cambia. Un parametro riferimento riceve una copia del riferimento: il metodo puo'
- * modificare l'oggetto condiviso e il chiamante lo vede. Controesempio di passaggio "per
- * riferimento": riassegnare il parametro ({@code s = new Studente(...)}) cambia solo la
- * copia locale, e la variabile del chiamante continua a riferire l'oggetto originale.
+ * Un parametro primitivo riceve una copia del valore, quindi la variabile del
+ * chiamante
+ * non cambia. Un parametro riferimento riceve una copia del riferimento: il
+ * metodo puo'
+ * modificare l'oggetto condiviso e il chiamante lo vede. Controesempio di
+ * passaggio "per
+ * riferimento": riassegnare il parametro ({@code s = new Studente(...)}) cambia
+ * solo la
+ * copia locale, e la variabile del chiamante continua a riferire l'oggetto
+ * originale.
  * Modificare un oggetto e riassegnare una variabile sono operazioni diverse.
  */
 public class EsempioParametri {

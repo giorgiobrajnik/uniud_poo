@@ -2,11 +2,16 @@ package it.universita.esse3.blocchi;
 
 /**
  * Blocchi e indentazione: usare sempre le parentesi graffe.
- * {@link ControlloSoglia} racchiude entrambe le azioni nel blocco dell'{@code if}: sopra
- * soglia non succede nulla, sotto soglia vengono eseguite entrambe. Controesempio:
- * {@link ControlloSogliaSenzaGraffe} omette le graffe e l'indentazione fa credere che la
- * seconda istruzione dipenda dall'{@code if}, mentre viene eseguita sempre. Java legge
- * solo la prima istruzione dopo la condizione; l'indentazione non ha valore sintattico.
+ * {@link ControlloSoglia} racchiude entrambe le azioni nel blocco
+ * dell'{@code if}: sopra
+ * soglia non succede nulla, sotto soglia vengono eseguite entrambe.
+ * Controesempio:
+ * {@link ControlloSogliaSenzaGraffe} omette le graffe e l'indentazione fa
+ * credere che la
+ * seconda istruzione dipenda dall'{@code if}, mentre viene eseguita sempre.
+ * Java legge
+ * solo la prima istruzione dopo la condizione; l'indentazione non ha valore
+ * sintattico.
  */
 public class EsempioBlocchi {
     public static void main(String[] args) {

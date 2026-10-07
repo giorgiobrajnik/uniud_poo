@@ -2,11 +2,16 @@ package it.universita.esse3.wrapper;
 
 /**
  * Wrapper, boxing e unboxing.
- * Mostra {@code Integer.valueOf}, l'autoboxing (anche in una {@code List<Integer>}) e
- * l'unboxing. Controesempio: un wrapper puo' valere {@code null} e l'unboxing di
- * {@code null} lancia {@link NullPointerException}; un controllo esplicito con un valore
- * di default lo evita. Alla fine confronta il tempo di una somma di 100 milioni di termini
- * con {@code Long} (ogni iterazione fa unboxing, somma e nuovo boxing) e con {@code long}:
+ * Mostra {@code Integer.valueOf}, l'autoboxing (anche in una
+ * {@code List<Integer>}) e
+ * l'unboxing. Controesempio: un wrapper puo' valere {@code null} e l'unboxing
+ * di
+ * {@code null} lancia {@link NullPointerException}; un controllo esplicito con
+ * un valore
+ * di default lo evita. Alla fine confronta il tempo di una somma di 100 milioni
+ * di termini
+ * con {@code Long} (ogni iterazione fa unboxing, somma e nuovo boxing) e con
+ * {@code long}:
  * i tempi variano da macchina a macchina, ma il wrapper e' molto piu' lento.
  */
 public class EsempioWrapper {

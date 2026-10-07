@@ -2,11 +2,16 @@ package it.universita.esse3.variabili;
 
 /**
  * Categorie di variabili, scope, {@code this} e metodi {@code static}.
- * Una variabile locale esiste solo nel blocco che la dichiara; blocchi separati possono
- * riusare lo stesso nome, mentre un blocco interno non puo' ridichiararne uno gia' visibile
- * (vedi i controesempi non compilabili). {@link SessioneUtente} ha un campo di istanza per
- * oggetto e un campo {@code static} condiviso. Controesempio: {@link CampoNascosto} assegna
- * il parametro a se stesso; {@link CampoConThis} usa {@code this.crediti}. Un metodo
+ * Una variabile locale esiste solo nel blocco che la dichiara; blocchi separati
+ * possono
+ * riusare lo stesso nome, mentre un blocco interno non puo' ridichiararne uno
+ * gia' visibile
+ * (vedi i controesempi non compilabili). {@link SessioneUtente} ha un campo di
+ * istanza per
+ * oggetto e un campo {@code static} condiviso. Controesempio:
+ * {@link CampoNascosto} assegna
+ * il parametro a se stesso; {@link CampoConThis} usa {@code this.crediti}. Un
+ * metodo
  * {@code static} non ha {@code this}.
  */
 public class EsempioVariabili {

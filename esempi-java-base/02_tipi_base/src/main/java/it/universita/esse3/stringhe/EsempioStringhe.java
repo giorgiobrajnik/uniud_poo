@@ -2,11 +2,15 @@ package it.universita.esse3.stringhe;
 
 /**
  * Conversioni da e verso stringhe.
- * Il parsing interpreta un testo come valore di un tipo: {@code Integer.parseInt},
- * {@code Long.parseLong}, {@code Double.parseDouble}, {@code Boolean.parseBoolean}.
+ * Il parsing interpreta un testo come valore di un tipo:
+ * {@code Integer.parseInt},
+ * {@code Long.parseLong}, {@code Double.parseDouble},
+ * {@code Boolean.parseBoolean}.
  * Controesempi: {@code parseInt("trenta")} segnala l'errore con una
- * {@link NumberFormatException}, mentre {@code parseBoolean("vero")} non segnala nulla e
- * vale {@code false}, perche' solo "true" (senza badare alle maiuscole) vale vero.
+ * {@link NumberFormatException}, mentre {@code parseBoolean("vero")} non
+ * segnala nulla e
+ * vale {@code false}, perche' solo "true" (senza badare alle maiuscole) vale
+ * vero.
  * Nel verso opposto si usano {@code Integer.toString} e {@code String.valueOf}.
  */
 public class EsempioStringhe {

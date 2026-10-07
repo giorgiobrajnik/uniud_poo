@@ -4,12 +4,18 @@ import it.universita.esse3.riferimenti.Studente;
 
 /**
  * Mutabilita', immutabilita' e aliasing.
- * Con un oggetto mutabile, due variabili che lo condividono (alias) osservano le stesse
- * modifiche; con {@link StudenteImmutabile} ogni operazione restituisce un nuovo oggetto e
- * l'originale non cambia. {@code String} e' immutabile ({@code s = s + "D"} produce un
- * altro valore), {@code StringBuilder} e' mutabile. Una lista condivisa e una copia
- * superficiale si comportano come alias degli elementi; la copia profonda li duplica.
- * {@link CodiceAppello} e' immutabile; {@link CodiceAppelloModificabile} e' il controesempio.
+ * Con un oggetto mutabile, due variabili che lo condividono (alias) osservano
+ * le stesse
+ * modifiche; con {@link StudenteImmutabile} ogni operazione restituisce un
+ * nuovo oggetto e
+ * l'originale non cambia. {@code String} e' immutabile ({@code s = s + "D"}
+ * produce un
+ * altro valore), {@code StringBuilder} e' mutabile. Una lista condivisa e una
+ * copia
+ * superficiale si comportano come alias degli elementi; la copia profonda li
+ * duplica.
+ * {@link CodiceAppello} e' immutabile; {@link CodiceAppelloModificabile} e' il
+ * controesempio.
  */
 public class EsempioMutabilita {
     public static void main(String[] args) {

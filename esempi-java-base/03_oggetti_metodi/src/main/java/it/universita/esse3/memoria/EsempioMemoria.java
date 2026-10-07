@@ -2,11 +2,16 @@ package it.universita.esse3.memoria;
 
 /**
  * Modello concettuale della memoria: stack, heap e garbage collection.
- * Ogni invocazione di metodo ha un frame con parametri e variabili locali; controesempio:
- * una ricorsione senza fine esaurisce lo stack e lancia {@link StackOverflowError}. Gli
- * oggetti vivono nello heap finche' sono raggiungibili: un oggetto con un riferimento
- * forte non viene raccolto, mentre dopo {@code s = null} diventa solo un candidato (il
- * momento della raccolta non e' garantito). Controesempio: una lista statica che cresce
+ * Ogni invocazione di metodo ha un frame con parametri e variabili locali;
+ * controesempio:
+ * una ricorsione senza fine esaurisce lo stack e lancia
+ * {@link StackOverflowError}. Gli
+ * oggetti vivono nello heap finche' sono raggiungibili: un oggetto con un
+ * riferimento
+ * forte non viene raccolto, mentre dopo {@code s = null} diventa solo un
+ * candidato (il
+ * momento della raccolta non e' garantito). Controesempio: una lista statica
+ * che cresce
  * trattiene oggetti inutili ma ancora raggiungibili.
  */
 public class EsempioMemoria {

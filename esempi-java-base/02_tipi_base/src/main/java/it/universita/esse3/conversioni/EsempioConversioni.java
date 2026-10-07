@@ -2,12 +2,18 @@ package it.universita.esse3.conversioni;
 
 /**
  * Conversioni tra tipi primitivi.
- * Widening implicito ({@code int} a {@code long}, {@code char} a {@code int}); controesempio:
- * {@code long} a {@code double} e' ammesso ma perde precisione oltre 2^53. Il cast
- * (narrowing) compila sempre ma applica solo le regole del linguaggio: {@code (byte) 130}
- * vale -126, {@code (int) -27.9} vale -27, e {@code (int)} su un id {@code long} troppo
- * grande lo rende negativo. Mostra che {@code byte + byte} e' un {@code int} e che la
- * divisione tra {@code int} e' intera: {@code 2 / 3} vale 0, mentre {@code (double) 2 / 3}
+ * Widening implicito ({@code int} a {@code long}, {@code char} a {@code int});
+ * controesempio:
+ * {@code long} a {@code double} e' ammesso ma perde precisione oltre 2^53. Il
+ * cast
+ * (narrowing) compila sempre ma applica solo le regole del linguaggio:
+ * {@code (byte) 130}
+ * vale -126, {@code (int) -27.9} vale -27, e {@code (int)} su un id
+ * {@code long} troppo
+ * grande lo rende negativo. Mostra che {@code byte + byte} e' un {@code int} e
+ * che la
+ * divisione tra {@code int} e' intera: {@code 2 / 3} vale 0, mentre
+ * {@code (double) 2 / 3}
  * vale circa 0,667.
  */
 public class EsempioConversioni {

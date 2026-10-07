@@ -2,12 +2,18 @@ package it.universita.esse3.virgolamobile;
 
 /**
  * Virgola mobile (IEEE 754), valori speciali e denaro.
- * Controesempio: {@code 0.1 + 0.2} vale {@code 0.30000000000000004} e il confronto con
- * {@code ==} fallisce, perche' 0.1 e 0.2 non sono rappresentabili esattamente; si usa una
- * tolleranza. Scompone 5.5 in segno, esponente e mantissa e lo ricostruisce. Mostra
- * {@code NaN} e {@code Infinity} e la divisione intera per zero, che lancia invece
- * un'eccezione. Per il denaro confronta {@code double} (10 x 0.1 non da' 1.0), centesimi
- * in {@code long} e {@code BigDecimal} da stringa; {@code new BigDecimal(0.1)} e' un
+ * Controesempio: {@code 0.1 + 0.2} vale {@code 0.30000000000000004} e il
+ * confronto con
+ * {@code ==} fallisce, perche' 0.1 e 0.2 non sono rappresentabili esattamente;
+ * si usa una
+ * tolleranza. Scompone 5.5 in segno, esponente e mantissa e lo ricostruisce.
+ * Mostra
+ * {@code NaN} e {@code Infinity} e la divisione intera per zero, che lancia
+ * invece
+ * un'eccezione. Per il denaro confronta {@code double} (10 x 0.1 non da' 1.0),
+ * centesimi
+ * in {@code long} e {@code BigDecimal} da stringa; {@code new BigDecimal(0.1)}
+ * e' un
  * controesempio perche' eredita l'approssimazione del {@code double}.
  */
 public class EsempioVirgolaMobile {
