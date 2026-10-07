@@ -14,8 +14,9 @@
     <description>Esempi e controesempi sulle basi di Java, un sottoprogetto per argomento</description>
 
     <modules>
-        <module>convenzioni_base</module>
-        <module>tipi_base</module>
+        <module>01_convenzioni_base</module>
+        <module>02_tipi_base</module>
+        <module>03_oggetti_metodi</module>
     </modules>
 
     <properties>
