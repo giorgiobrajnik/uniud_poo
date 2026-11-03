@@ -6,7 +6,9 @@ public class CostoAutoboxing {
         Long somma = 0L;
         for (long i = 0; i < n; i++) {
             somma += i;
+            // somma = somma + Long.valueOf(i);
         }
+        // Long x = Long.valueOf(somma);
         return somma;
     }
 
