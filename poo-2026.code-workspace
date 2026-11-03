@@ -1,11 +1,8 @@
 {
   "folders": [
     {
-      "path": "esempio-pizzeria",
-      "name": "Esempio Pizzeria"
-    },
-    {
-      "path": "esempi-java-base"
+      "path": ".",
+      "name": "POO 2026"
     }
   ],
   "settings": {
