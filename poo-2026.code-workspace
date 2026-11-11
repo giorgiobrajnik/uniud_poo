@@ -6,10 +6,6 @@
     }
   ],
   "settings": {
-    "java.project.sourcePaths": [
-      "esempio-pizzeria/src/main/java",
-      "esempio-pizzeria/src/test/java"
-    ],
     "java.test.config": {
       "name": "pizzeria-tests",
       "workingDirectory": "${workspaceFolder}/esempio-pizzeria",
@@ -24,7 +20,8 @@
         "source.fixAll": "explicit"
       }
     },
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.debug.settings.onBuildFailureProceed": true
   },
   "extensions": {
     "recommendations": [
