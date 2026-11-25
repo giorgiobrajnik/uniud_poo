@@ -4,7 +4,6 @@ package it.uniud.tda.polynomial.immutabile;
 public final class Main {
     /**
      * Impedisce l'istanziazione della classe dimostrativa priva di stato.
-     * @pre Nessuna.
      * @post È costruita un'istanza senza stato osservabile.
      */
     private Main() { }

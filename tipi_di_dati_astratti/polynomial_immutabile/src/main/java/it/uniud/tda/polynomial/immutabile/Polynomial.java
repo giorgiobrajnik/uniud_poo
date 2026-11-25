@@ -4,7 +4,6 @@ import lombok.EqualsAndHashCode;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -63,8 +62,8 @@ public final class Polynomial {
      * all'unica forma canonica [3, 2, 5].
      *
      * @param normalizedCoefficients coefficienti concreti in ordine di esponente
-     * @pre La lista è non null, non contiene null ed è vuota oppure termina
-     *      con un coefficiente non nullo.
+     * @throws NullPointerException se la lista o un suo elemento è null
+     * @pre La lista è vuota oppure termina con un coefficiente non nullo.
      * @post coefficients è una copia non modificabile della lista e il
      *       RI vale; la lista ricevuta non è modificata né trattenuta.
      */
@@ -92,15 +91,15 @@ public final class Polynomial {
      * @param coefficients il coefficiente in posizione i appartiene a x^i
      * @return il polinomio descritto dai coefficienti; gli zeri finali sono irrilevanti
      * @throws NullPointerException se l'array è null
-     * @pre coefficients != null.
      * @post Per ogni i nell'array, result.coefficient(i) è coefficients[i];
      *       oltre la sua lunghezza è zero. L'array non è modificato né trattenuto.
      */
     public static Polynomial of(int... coefficients) {
         Objects.requireNonNull(coefficients, "coefficients deve essere non null");
-        List<BigInteger> converted = Arrays.stream(coefficients)
-                .mapToObj(BigInteger::valueOf)
-                .toList();
+        List<BigInteger> converted = new ArrayList<>(coefficients.length);
+        for (int coefficient : coefficients) {
+            converted.add(BigInteger.valueOf(coefficient));
+        }
         return from(converted);
     }
 
@@ -111,7 +110,6 @@ public final class Polynomial {
      * @param exponent esponente del monomio
      * @return coefficient * x^exponent, oppure zero se il coefficiente è zero
      * @throws IllegalArgumentException se exponent è negativo
-     * @pre exponent >= 0.
      * @post Solo il coefficiente di grado exponent può essere diverso da zero.
      */
     public static Polynomial monomial(int coefficient, int exponent) {
@@ -130,7 +128,6 @@ public final class Polynomial {
      * @param exponent esponente da osservare
      * @return il coefficiente di x^exponent, zero se il termine è assente
      * @throws IllegalArgumentException se exponent è negativo
-     * @pre exponent >= 0.
      * @post Il risultato è il coefficiente richiesto e questo polinomio è invariato.
      */
     public BigInteger coefficient(int exponent) {
@@ -165,7 +162,6 @@ public final class Polynomial {
      * @param value nuovo coefficiente int, convertito in BigInteger
      * @return il polinomio aggiornato
      * @throws IllegalArgumentException se exponent è negativo
-     * @pre exponent >= 0.
      * @post Il coefficiente exponent del risultato vale value; ogni altro
      *       coefficiente coincide con quello di this; this è invariato.
      */
@@ -185,7 +181,6 @@ public final class Polynomial {
      * @param other secondo addendo
      * @return la somma matematica
      * @throws NullPointerException se other è null
-     * @pre other != null.
      * @post Per ogni k, result.coefficient(k) = this.coefficient(k) +
      *       other.coefficient(k); entrambi gli addendi sono invariati.
      */
@@ -205,7 +200,6 @@ public final class Polynomial {
      * @param other sottraendo
      * @return la differenza matematica
      * @throws NullPointerException se other è null
-     * @pre other != null.
      * @post Per ogni k, result.coefficient(k) = this.coefficient(k) -
      *       other.coefficient(k); gli operandi sono invariati.
      */
@@ -225,7 +219,6 @@ public final class Polynomial {
      * @param other secondo fattore
      * @return il prodotto matematico
      * @throws NullPointerException se other è null
-     * @pre other != null.
      * @post Il coefficiente k del risultato è la somma dei prodotti dei
      *       coefficienti i e j degli operandi per i+j=k; gli operandi sono invariati.
      */
@@ -305,7 +298,7 @@ public final class Polynomial {
      *
      * @param values lista non normalizzata
      * @return un polinomio privo di zeri finali nella rappresentazione
-     * @pre values è non null e non contiene null.
+     * @throws NullPointerException se values o un suo elemento è null
      * @post Il risultato rappresenta gli stessi coefficienti di values e
      *       soddisfa il RI; values è invariata e non è trattenuta.
      */
@@ -322,7 +315,7 @@ public final class Polynomial {
      *
      * @param exponent indice concreto da leggere
      * @return coefficients[exponent] se presente, zero altrimenti
-     * @pre exponent >= 0 e il RI vale.
+     * @throws IndexOutOfBoundsException se exponent è negativo
      * @post La rappresentazione è invariata.
      */
     private BigInteger coefficientOrZero(int exponent) {
@@ -334,7 +327,7 @@ public final class Polynomial {
      *
      * @param size numero di celle
      * @return una nuova lista modificabile di lunghezza size, piena di zeri
-     * @pre size >= 0.
+     * @throws IllegalArgumentException se size è negativo
      * @post Ogni cella del risultato è {@link BigInteger#ZERO}.
      */
     private static List<BigInteger> zeroes(int size) {
@@ -351,8 +344,9 @@ public final class Polynomial {
      * @param text accumulatore del testo già prodotto
      * @param coefficient coefficiente del termine
      * @param exponent esponente del termine
-     * @pre text e coefficient sono non null, exponent >= 0; text è
-     *      vuoto oppure contiene già termini di esponente maggiore.
+     * @throws NullPointerException se text o coefficient è null
+     * @pre exponent >= 0; text è vuoto oppure contiene già termini di
+     *      esponente maggiore.
      * @post Se coefficient è zero text è invariato; altrimenti contiene in
      *       coda il termine, col segno e i separatori appropriati.
      */
@@ -378,7 +372,7 @@ public final class Polynomial {
     }
 
     /**
-     * Verifica una precondizione sugli indici della rappresentazione.
+     * Verifica che un esponente sia non negativo.
      *
      * @param exponent esponente da validare
      * @throws IllegalArgumentException se exponent è negativo
@@ -399,7 +393,9 @@ public final class Polynomial {
      */
     private void checkRep() {
         assert coefficients != null;
-        assert coefficients.stream().noneMatch(Objects::isNull);
+        for (BigInteger coefficient : coefficients) {
+            assert coefficient != null;
+        }
         assert coefficients.isEmpty() || coefficients.getLast().signum() != 0;
     }
 }

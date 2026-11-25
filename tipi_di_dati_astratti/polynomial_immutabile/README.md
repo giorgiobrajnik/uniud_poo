@@ -20,7 +20,10 @@ L'annotazione Lombok `@EqualsAndHashCode` è sicura perché la rappresentazione 
 
 ## Errori e casi limite
 
-Un esponente negativo viola la precondizione e causa `IllegalArgumentException`; un riferimento `null` causa `NullPointerException`. Coefficienti oltre il grado valgono zero. Zeri finali e somme che si annullano sono normalizzati.
+Un esponente negativo è un caso definito dal contratto e causa
+`IllegalArgumentException`; un riferimento `null` causa
+`NullPointerException`. Coefficienti oltre il grado valgono zero. Zeri finali
+e somme che si annullano sono normalizzati.
 
 ## Esecuzione
 

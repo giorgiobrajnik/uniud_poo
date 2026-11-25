@@ -1,6 +1,7 @@
 package it.uniud.tda.polynomial.immutabile;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
 import java.math.BigInteger;
 
@@ -50,7 +51,17 @@ class PolynomialTest {
     @Test
     void rifiutaEsponentiNegativiEArrayNull() {
         Polynomial p = Polynomial.zero();
-        assertThrows(IllegalArgumentException.class, () -> p.coefficient(-1));
-        assertThrows(NullPointerException.class, () -> Polynomial.of((int[]) null));
+        assertThrows(IllegalArgumentException.class, new Executable() {
+            @Override
+            public void execute() {
+                p.coefficient(-1);
+            }
+        });
+        assertThrows(NullPointerException.class, new Executable() {
+            @Override
+            public void execute() {
+                Polynomial.of((int[]) null);
+            }
+        });
     }
 }
